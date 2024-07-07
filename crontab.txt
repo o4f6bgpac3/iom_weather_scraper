@@ -1,0 +1,4 @@
+# Insert the following lines into your crontab (crontab -e) to run on a schedule.
+
+0 9 * * * /bin/bash -c 'cd ~/code/experiments/iom_weather_scraper && source venv/bin/activate && python weather_scraper.py && deactivate && cd' >> weather_scraper.log 2>&1
+10 9 * * * /bin/bash -c 'cd ~/code/experiments/iom_weather_scraper && source venv/bin/activate && python status_checker.py && deactivate && cd' >> status_checker.log 2>&1
